@@ -6,8 +6,9 @@ public class InstantiateEscapingShip : MonoBehaviour
 {
     [SerializeField] private GameObject _escapingShiptoInstantiate;
     [SerializeField] private float _spawnShipInterval;
-    [SerializeField] private Transform _referenceObject;
     private float _timer;
+    [SerializeField] private float _minY = 0f;
+    [SerializeField] private float _maxY = 10f;
     void Start()
     {
         _timer = Random.Range(0f, _spawnShipInterval);
@@ -18,15 +19,10 @@ public class InstantiateEscapingShip : MonoBehaviour
 
         if (_timer >= _spawnShipInterval)
         {
-            float randomY = Random.Range(0f, Screen.height);
+            float randomY = Random.Range(_minY, _maxY);
+            Vector3 randomPosition = new Vector3 (-20,randomY, 0f);
 
-            Vector3 screenPosition = new Vector3(0, randomY, Camera.main.nearClipPlane);
-            Vector3 spawnPosition = Camera.main.ScreenToWorldPoint(new Vector3(0, randomY, Camera.main.nearClipPlane));
-
-            spawnPosition.z = 0; 
-            spawnPosition += _referenceObject.position;
-
-            GameObject newEscapingShip = Instantiate(_escapingShiptoInstantiate, spawnPosition, Quaternion.identity);
+            GameObject newEscapingShip = Instantiate(_escapingShiptoInstantiate, randomPosition, Quaternion.identity);
 
             GoRightScript newEscapingShipScript = newEscapingShip.GetComponent<GoRightScript>();
             newEscapingShipScript.MoveRightFunction();
