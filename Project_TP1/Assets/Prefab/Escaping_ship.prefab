@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 5653336618035040843}
   - component: {fileID: 5335490071837821884}
   - component: {fileID: -6179678221259557867}
+  - component: {fileID: 2517808951932606684}
+  - component: {fileID: 5177767756666181960}
   m_Layer: 0
   m_Name: Escaping_ship
   m_TagString: Untagged
@@ -119,3 +121,41 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!61 &2517808951932606684
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 500653902216188118}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 8.62, y: 3.57}
+    newSize: {x: 8.62, y: 3.57}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 8.62, y: 3.57}
+  m_EdgeRadius: 0
+--- !u!114 &5177767756666181960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 500653902216188118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc4e10cf98e3bb145b476ac67599562c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
